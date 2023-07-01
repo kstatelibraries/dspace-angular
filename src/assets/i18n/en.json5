@@ -5500,4 +5500,16 @@
   "metadata-export-search.submit.error.limit-exceeded": "Only the first {{limit}} items will be exported",
 
   "repository.title.prefixDSpace": "K-REx ::",
+
+  "item.page.etdr.graduationmonth": "Graduation Month",
+
+  "item.page.etdr.degree": "Degree",
+
+  "item.page.etdr.department": "Department",
+
+  "item.page.etdr.advisor": "Major Professor",
+
+  "item.page.etdr.date": "Date",
+
+  "item.page.etdr.type": "Type",
 }
