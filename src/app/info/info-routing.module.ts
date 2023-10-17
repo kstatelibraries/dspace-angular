@@ -14,6 +14,9 @@ import { FeedbackGuard } from '../core/feedback/feedback.guard';
 import { environment } from '../../environments/environment';
 import { AccessibilitySettingsComponent } from './accessibility-settings/accessibility-settings.component';
 
+// KREx about page
+import { ABOUT_PATH } from './info-routing-paths';
+import { AboutComponent } from './about/about.component';
 
 const imports = [
   RouterModule.forChild([
@@ -55,6 +58,17 @@ const imports = [
         }
       ]));
   }
+
+  // KREx about page
+  imports.push(
+    RouterModule.forChild([
+      {
+        path: ABOUT_PATH,
+        component: AboutComponent,
+        resolve: { breadcrumb: I18nBreadcrumbResolver },
+        data: { title: 'info.about.title', breadcrumbKey: 'info.about' }
+      }
+    ]));
 
 @NgModule({
   imports: [
