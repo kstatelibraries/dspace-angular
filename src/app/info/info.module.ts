@@ -17,6 +17,7 @@ import { AccessibilitySettingsComponent } from './accessibility-settings/accessi
 import { UiSwitchModule } from 'ngx-ui-switch';
 
 import { AboutComponent } from './about/about.component';
+import { WorksFacultyComponent } from './works/faculty/works-faculty.component';
 
 
 const DECLARATIONS = [
@@ -32,6 +33,7 @@ const DECLARATIONS = [
   ThemedFeedbackComponent,
   AccessibilitySettingsComponent,
   AboutComponent,
+  WorksFacultyComponent,
 ];
 
 @NgModule({

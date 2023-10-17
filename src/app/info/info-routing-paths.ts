@@ -7,6 +7,8 @@ export const ACCESSIBILITY_SETTINGS_PATH = 'accessibility';
 
 // KREx about page
 export const ABOUT_PATH = 'about';
+// KREx Faculty Works page
+export const WORKS_FACULTY_PATH = 'works/faculty';
 
 export function getEndUserAgreementPath() {
     return getSubPath(END_USER_AGREEMENT_PATH);
@@ -26,6 +28,11 @@ export function getAccessibilitySettingsPath() {
 // KREx About Path
 export function getAboutPath() {
     return getSubPath(ABOUT_PATH);
+}
+
+// KREx FacultyWorks Path
+export function getWorksFacultyPath() {
+    return getSubPath(WORKS_FACULTY_PATH);
 }
 
 function getSubPath(path: string) {
