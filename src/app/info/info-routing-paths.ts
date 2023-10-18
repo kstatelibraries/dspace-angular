@@ -13,6 +13,9 @@ export const WORKS_FACULTY_PATH = 'works/faculty';
 export const WORKS_STUDENT_PATH = 'works/student';
 // KREx LICENSE page
 export const LICENSE_PATH = 'license';
+// KREx SYMBOLS page
+export const SYMBOLS_PATH = 'guidelines/symbols';
+// KREx Attachments page
 
 export function getEndUserAgreementPath() {
     return getSubPath(END_USER_AGREEMENT_PATH);
@@ -47,6 +50,11 @@ export function getWorksStudentsPath() {
 // KREx License Path
 export function getLicensePath() {
     return getSubPath(LICENSE_PATH);
+}
+
+// KREx Symbols Guidelines Path
+export function getSymbolsGuidelinesPath() {
+    return getSubPath(SYMBOLS_PATH);
 }
 
 function getSubPath(path: string) {
