@@ -23,6 +23,7 @@ import { LicenseComponent } from './license/license.component';
 import { SymbolsGudielinesComponent } from './guidelines/symbols/symbols.component';
 import { AttachmentsGuidelinesComponent } from './guidelines/attachments/attachments.component';
 import { AuthorsGuidelinesComponent } from './guidelines/authors/authors.component';
+import { KeywordsGuidelinesComponent } from './guidelines/keywords/keywords.component';
 
 const DECLARATIONS = [
   EndUserAgreementComponent,
@@ -43,6 +44,7 @@ const DECLARATIONS = [
   SymbolsGudielinesComponent,
   AttachmentsGuidelinesComponent,
   AuthorsGuidelinesComponent,
+  KeywordsGuidelinesComponent
 ];
 
 @NgModule({
