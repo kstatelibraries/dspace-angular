@@ -17,8 +17,6 @@ import { AccessibilitySettingsComponent } from './accessibility-settings/accessi
 import { UiSwitchModule } from 'ngx-ui-switch';
 
 import { AboutComponent } from './about/about.component';
-import { WorksFacultyComponent } from './works/faculty/works-faculty.component';
-import { WorksStudentsComponent } from './works/students/works-students.component';
 import { LicenseComponent } from './license/license.component';
 import { SymbolsGudielinesComponent } from './guidelines/symbols/symbols.component';
 import { AttachmentsGuidelinesComponent } from './guidelines/attachments/attachments.component';
@@ -38,8 +36,6 @@ const DECLARATIONS = [
   ThemedFeedbackComponent,
   AccessibilitySettingsComponent,
   AboutComponent,
-  WorksFacultyComponent,
-  WorksStudentsComponent,
   LicenseComponent,
   SymbolsGudielinesComponent,
   AttachmentsGuidelinesComponent,
