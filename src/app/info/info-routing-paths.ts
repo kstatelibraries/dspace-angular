@@ -17,6 +17,8 @@ export const ATTACHMENTS_PATH = 'guidelines/attachments';
 export const AUTHORS_PATH = 'guidelines/authors';
 // KREx Keywords page
 export const KEYWORDS_PATH = 'guidelines/keywords';
+// KREx policy page
+export const POLICIES_PATH = 'policies';
 
 export function getEndUserAgreementPath() {
     return getSubPath(END_USER_AGREEMENT_PATH);
@@ -61,6 +63,11 @@ export function getAuthorGuidelinessPath() {
 // KREx Keywords Guidelines Path
 export function getKeywordsGuidelinesPath() {
     return getSubPath(KEYWORDS_PATH);
+}
+
+// KREx Policies Path
+export function getPoliciesPath() {
+    return getSubPath(POLICIES_PATH);
 }
 
 function getSubPath(path: string) {
