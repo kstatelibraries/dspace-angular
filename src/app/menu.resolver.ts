@@ -155,7 +155,7 @@ export class MenuResolver implements Resolve<boolean> {
             id: `krex_menu_policies`,
             active: false,
             visible: true,
-            index: 3,
+            index: 2,
             model: {
               type: MenuItemType.LINK,
               text: 'menu.section.policies',
