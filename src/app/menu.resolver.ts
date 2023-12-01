@@ -100,7 +100,7 @@ export class MenuResolver implements Resolve<boolean> {
         id: `browse_global_communities_and_collections`,
         active: false,
         visible: true,
-        index: 2,
+        index: 0,
         model: {
           type: MenuItemType.LINK,
           text: `menu.section.browse_global_communities_and_collections`,
@@ -132,7 +132,7 @@ export class MenuResolver implements Resolve<boolean> {
               id: 'browse_global',
               active: false,
               visible: true,
-              index: 1,
+              index: 2,
               model: {
                 type: MenuItemType.TEXT,
                 text: 'menu.section.browse_global'
@@ -190,7 +190,7 @@ export class MenuResolver implements Resolve<boolean> {
               id: 'navigate_krex',
               active: false,
               visible: true,
-              index: 0,
+              index: 1,
               model: {
                 type: MenuItemType.TEXT,
                 text: 'menu.section.navigate'
