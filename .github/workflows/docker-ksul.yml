@@ -31,6 +31,7 @@ jobs:
       build_id: dspace-dspace-angular-dev
       image_name: kstatelibraries/krex-dspace-angular
       dockerfile_path: ./Dockerfile
+      arch_matrix: "[ 'linux/amd64' ]"
     secrets:
       DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
       DOCKER_ACCESS_TOKEN: ${{ secrets.DOCKER_ACCESS_TOKEN }}
@@ -47,6 +48,7 @@ jobs:
       build_id: krex-dspace-angular-dist
       image_name: kstatelibraries/krex-dspace-angular
       dockerfile_path: ./Dockerfile.dist
+      arch_matrix: "[ 'linux/amd64' ]"
       # As this is a "dist" image, its tags are all suffixed with "-dist". Otherwise, it uses the same
       # tagging logic as the primary 'kstatelibraries/krex-dspace-angular' image above.
       tags_flavor: suffix=-dist
