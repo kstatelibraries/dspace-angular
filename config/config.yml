@@ -11,6 +11,15 @@ cache:
     anonymousCache:
       max: 100
 
+# Authentication settings
+auth:
+  # Authentication UI settings
+  ui:
+    # the amount of time before the idle warning is shown
+    timeUntilIdle: 360000 # 1 hour
+    # the amount of time the user has to react after the idle warning is shown before they are logged out.
+    idleGracePeriod: 2880000 # 8 hours
+
 universal:
   # Whether to inline "critical" styles into the server-side rendered HTML.
   # Determining which styles are critical is a relatively expensive operation;
