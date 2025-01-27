@@ -9,7 +9,7 @@ cache:
     botCache:
       max: 1000
     anonymousCache:
-      max: 100
+      max: 0
 
 universal:
   # Whether to inline "critical" styles into the server-side rendered HTML.
