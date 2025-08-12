@@ -26,7 +26,7 @@ jobs:
     # Ensure this job never runs on forked repos. It's only executed for 'kstatelibraries/dspace-angular'
     if: github.repository == 'kstatelibraries/dspace-angular'
     # Use the reusable-docker-build.yml script from kstatelibraries/kstatelibraries repo to build our Docker image
-    uses: kstatelibraries/kstatelibraries/.github/workflows/reusable-docker-build.yml@main
+    uses: kstatelibraries/.github/.github/workflows/reusable-docker-build.yml@main
     with:
       build_id: dspace-dspace-angular-dev
       image_name: kstatelibraries/krex-dspace-angular
@@ -43,7 +43,7 @@ jobs:
     # Ensure this job never runs on forked repos. It's only executed for 'kstatelibraries/dspace-angular'
     if: github.repository == 'kstatelibraries/dspace-angular'
     # Use the reusable-docker-build.yml script from kstatelibraries/kstatelibraries repo to build our Docker image
-    uses: kstatelibraries/kstatelibraries/.github/workflows/reusable-docker-build.yml@main
+    uses: kstatelibraries/.github/.github/workflows/reusable-docker-build.yml@main
     with:
       build_id: krex-dspace-angular-dist
       image_name: kstatelibraries/krex-dspace-angular
