@@ -34,6 +34,7 @@ export function getFeedbackPath() {
 
 export function getAccessibilitySettingsPath() {
     return getSubPath(ACCESSIBILITY_SETTINGS_PATH);
+}
 
 // KREx About Path
 export function getAboutPath() {
