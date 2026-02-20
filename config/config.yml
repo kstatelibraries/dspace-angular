@@ -4,12 +4,12 @@ rest:
   port: 443
   nameSpace: /server
 
-cache:
-  serverSide:
-    botCache:
-      max: 1000
-    anonymousCache:
-      max: 0
+#cache:
+#  serverSide:
+#    botCache:
+#      max: 1000
+#    anonymousCache:
+#      max: 0
 
 universal:
   # Whether to inline "critical" styles into the server-side rendered HTML.
