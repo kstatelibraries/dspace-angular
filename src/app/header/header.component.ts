@@ -56,6 +56,9 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.isMobile$ = this.windowService.isUpTo(this.maxMobileWidth);
+    console.log('isMobile$', this.isMobile$);
+    console.log('menuID', this.menuID);
+    console.log('maxMobileWidth', this.maxMobileWidth);
   }
 
   public toggleNavbar(): void {

@@ -1,0 +1,20 @@
+<div class="background-image-container mt-ncs">
+  <div class="container">
+    <div class="jumbotron jumbotron-fluid">
+      <div>
+        <div>
+          <h2 class="display-5">K-State Research Exchange<span class="d-none d-md-inline"> (K-REx)</span></h2>
+          <p>The university's digital repository.</p>
+          <ds-search-form [inPlaceSearch]="false" [searchPlaceholder]="'home.search-form.placeholder' | translate"></ds-search-form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <picture class="background-image">
+    <!-- <source type="image/webp" srcset="assets/dspace/images/banner.webp 2000w, assets/dspace/images/banner-half.webp 1200w, assets/dspace/images/banner-tall.webp 768w"> -->
+    <!-- <source type="image/jpg" srcset="assets/dspace/images/banner.jpg 2000w, assets/dspace/images/banner-half.jpg 1200w, assets/dspace/images/banner-tall.jpg 768w"> -->
+    <img alt="" [src]="'assets/krex/images/research-exchange_purple-bkg.jpg'"/><!-- without the []="''" Firefox downloads both the fallback and the resolved image -->
+  </picture>
+  <!-- <small class="credits">Photo by <a href="https://www.pexels.com/@inspiredimages">@inspiredimages</a></small> -->
+</div>

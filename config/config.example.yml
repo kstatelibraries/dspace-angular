@@ -7,7 +7,7 @@ debug: false
 ui:
   ssl: false
   host: localhost
-  port: 4000
+  port: 4003
   # NOTE: Space is capitalized because 'namespace' is a reserved string in TypeScript
   nameSpace: /
   # The rateLimiter settings limit each IP to a 'limit' of 500 requests per 'windowMs' (1 minute).
@@ -479,6 +479,13 @@ themes:
       attributes:
         rel: manifest
         href: assets/dspace/images/favicons/manifest.webmanifest
+    - tagName: meta
+        -name: krex
+  # - name: 
+  #   - tagName: krex
+  #     attributes:
+  #       rel: icon
+  #       sizes: any
 
 # The default bundles that should always be displayed as suggestions when you upload a new bundle
 bundle:

@@ -1,0 +1,56 @@
+// Add any global css for the theme here
+
+// imports the base global style
+@import '../../../styles/_global-styles.scss';
+
+.facet-filter, .setting-option, .advanced-search {
+  background-color: var(--bs-light);
+  border-radius: var(--bs-border-radius);
+
+  &.p-3 {
+    // Needs !important because the original bootstrap class uses it
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+
+  .bg-secondary {
+    background-color: var(--bs-primary);
+  }
+
+  h4, .h4 {
+    font-size: 1.1rem
+  }
+}
+  
+.btn-primary {
+  color: #fff;
+  background-color: #512888;
+  border-color: #512888;
+  box-shadow: inset 0 1px #ffffff26, 0 1px 1px #00000013;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #452170;
+  border-color: #3f1e67;
+}
+
+.btn-primary:focus,
+.btn-primary.focus {
+  color: #fff;
+  background-color: #452170;
+  border-color: #3f1e67;
+  box-shadow: 0 0 0 0.25rem rgba(81, 40, 136, 0.25);
+}
+
+.ng-trigger-slide {
+  .ng-star-inserted {
+    padding: 0.5rem;
+
+  }
+}
+
+.my-cs {
+    margin-top: var(--ds-content-spacing);
+    margin-bottom: var(--ds-content-spacing);
+}

@@ -13,6 +13,7 @@ import { EditCommunitySelectorComponent } from './app/shared/dso-selector/modal-
 import { EditItemSelectorComponent } from './app/shared/dso-selector/modal-wrappers/edit-item-selector/edit-item-selector.component';
 import { LangSwitchComponent } from './app/shared/lang-switch/lang-switch.component';
 import { LogInComponent } from './app/shared/log-in/log-in.component';
+import { KsuFooterComponent } from './app/ksu-footer/ksu-footer.component';
 
 export const COMPONENTS = [
   HomeNewsComponent,
@@ -29,4 +30,5 @@ export const COMPONENTS = [
   EditItemSelectorComponent,
   LogInComponent,
   LangSwitchComponent,
+  KsuFooterComponent
 ];
