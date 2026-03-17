@@ -4,9 +4,10 @@
   div.background-image-container {
     color: white;
     position: relative;
+    // font-weight: 600;
 
     .background-image > img {
-      background-color: var(--bs-info);
+      background-color: var(--bs-primary);
       position: absolute;
       z-index: -1;
       top: 0;
@@ -21,8 +22,7 @@
       position: relative;
       text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
 
-      &:before,
-      &:after {
+      &:before, &:after {
         content: '';
         display: block;
         width: var(--ds-banner-background-gradient-width);
@@ -34,6 +34,7 @@
       &:before {
         background: linear-gradient(to left, var(--ds-banner-text-background), transparent);
         left: calc(-1 * var(--ds-banner-background-gradient-width));
+
       }
 
       &:after {
@@ -43,6 +44,7 @@
 
       background-color: var(--ds-banner-text-background);
     }
+
 
     small.credits {
       a {
@@ -56,6 +58,10 @@
     }
   }
 
+  .home-news-content {
+    background-color: var(--ds-home-news-content-background);
+  }
+
   .jumbotron {
     background-color: transparent;
   }
@@ -63,9 +69,15 @@
   a {
     color: var(--ds-home-news-link-color);
 
-    &:hover,
-    &:focus {
+    &:hover {
       color: var(--ds-home-news-link-hover-color);
     }
   }
+
+  .lead {
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
 }
+
+

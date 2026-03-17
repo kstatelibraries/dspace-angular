@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'ds-ksu-header',
@@ -6,10 +6,16 @@ import { Component } from '@angular/core';
   templateUrl: './ksu-header.component.html',
   styleUrl: './ksu-header.component.scss',
 })
-export class KsuHeaderComponent {
+export class KsuHeaderComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+    
+  }
 
   expandNavBar() {
-    var element = document.getElementById('top-navID');
-    element.classList.toggle("expanded");
-  }
+      var element = document.getElementById('top-navID');
+      element.classList.toggle("expanded");
+    }
 }

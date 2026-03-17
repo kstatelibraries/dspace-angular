@@ -1,14 +1,6 @@
 // Override or add CSS variables for your theme here
 
 :root {
-  // --bs-primary: #{$primary};
-  // --bs-secondary: #{$secondary};
-  // --bs-success: #{$success};
-  // --bs-info: #{$info};
-  // --bs-warning: #{$warning};
-  // --bs-danger: #{$danger};
-  // --bs-light: #{$light};
-  // --bs-dark: #{$dark};
 
   @include media-breakpoint-up(md) {
     --ds-header-logo-height: 40px;
@@ -26,13 +18,18 @@
 
   /* set the next two properties as `--ds-header-navbar-border-bottom-*`
   in order to keep the bottom border of the header when navbar is expanded */
+
   --ds-expandable-navbar-border-top-color: #{$white};
   --ds-expandable-navbar-border-top-height: 0;
   --ds-expandable-navbar-padding-top: 0;
+
+  --ds-item-page-img-field-default-inline-height: 24px;
+  --ds-item-page-img-field-ror-inline-height: var(--ds-item-page-img-field-default-inline-height);
 
   /* K-REx Changes */
   --ds-header-navbar-border-bottom-color: #{$brand-primary};
   --ds-navbar-link-color: #{$brand-primary};
   --ds-navbar-link-color-hover: #{darken($brand-primary, 15%)};
-  --ds-breadcrumb-link-color: #{$brand-primary};
+  --ds-breadcrumb-link-color: #{$brand-primary};  
 }
+

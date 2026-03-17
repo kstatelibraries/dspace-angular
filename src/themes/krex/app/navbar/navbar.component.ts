@@ -1,33 +1,3 @@
-// import {
-//   AsyncPipe,
-//   NgClass,
-//   NgComponentOutlet,
-// } from '@angular/common';
-// import { Component } from '@angular/core';
-// import { NavbarComponent as BaseComponent } from '../../../../app/navbar/navbar.component';
-// import { slideMobileNav } from '../../../../app/shared/animations/slide';
-// import { ThemedUserMenuComponent } from '../../../../app/shared/auth-nav-menu/user-menu/themed-user-menu.component';
-// import { TranslateModule } from '@ngx-translate/core';
-
-
-// @Component({
-//   selector: 'ds-navbar',
-//   templateUrl: './navbar.component.html',
-//   styleUrls: ['./navbar.component.scss'],
-//   animations: [slideMobileNav],
-
-//   standalone: true,
-//   imports: [
-//     // pipes/directives used by your template
-//     AsyncPipe,
-//     NgClass,
-//     NgComponentOutlet,
-//     ThemedUserMenuComponent,
-//     TranslateModule,
-//   ],
-// })
-// export class NavbarComponent extends BaseComponent {}
-
 import {
   AsyncPipe,
   NgClass,
@@ -45,7 +15,7 @@ import { ThemedUserMenuComponent } from '../../../../app/shared/auth-nav-menu/us
  * Component representing the public navbar
  */
 @Component({
-  selector: 'ds-navbar',
+  selector: 'ds-themed-navbar',
   styleUrls: ['./navbar.component.scss'],
   templateUrl: './navbar.component.html',
   animations: [slideMobileNav],

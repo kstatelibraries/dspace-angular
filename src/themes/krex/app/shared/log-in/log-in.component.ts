@@ -1,12 +1,19 @@
 import { Component } from '@angular/core';
-import { LogInComponent as BaseComponent } from 'src/themes/custom/app/shared/log-in/log-in.component'; 
+import { TranslateModule } from '@ngx-translate/core';
+import { AuthMethodType } from '@dspace/core/auth/models/auth.method-type';
 
+import { LoginPageComponent as BaseComponent } from 'src/app/login-page/login-page.component';
+import { ThemedLogInComponent } from 'src/app/shared/log-in/themed-log-in.component';
+
+/**
+ * This component represents the login page
+ */
 @Component({
-  selector: 'ds-log-in',
-  imports: [],
+  selector: 'ds-login-page',
+  imports: [ThemedLogInComponent, TranslateModule],
+  styleUrls: ['./log-in.component.scss'],
   templateUrl: './log-in.component.html',
-  styleUrl: './log-in.component.scss',
 })
-export class LogInComponent extends BaseComponent {
-
+export class LoginComponent extends BaseComponent {
+  protected readonly AuthMethodType = AuthMethodType;
 }
