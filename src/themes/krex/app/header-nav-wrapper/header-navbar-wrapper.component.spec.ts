@@ -1,4 +1,7 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { 
+  ComponentFixture, 
+  TestBed,
+} from '@angular/core/testing';
 
 import { HeaderNavbarWrapperComponent } from './header-navbar-wrapper.component';
 
@@ -8,9 +11,9 @@ describe('HeaderNavbarWrapperComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HeaderNavbarWrapperComponent]
+      imports: [HeaderNavbarWrapperComponent],
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(HeaderNavbarWrapperComponent);
     component = fixture.componentInstance;

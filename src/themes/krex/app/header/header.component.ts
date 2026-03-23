@@ -14,7 +14,7 @@ import { HeaderComponent as BaseComponent } from '../../../../app/header/header.
 import { ThemedSearchNavbarComponent } from '../../../../app/search-navbar/themed-search-navbar.component';
 import { ThemedAuthNavMenuComponent } from '../../../../app/shared/auth-nav-menu/themed-auth-nav-menu.component';
 import { ImpersonateNavbarComponent } from '../../../../app/shared/impersonate-navbar/impersonate-navbar.component';
-import { NavbarComponent } from '../../../../app/navbar/navbar.component';
+import { NavbarComponent } from '../navbar/navbar.component';
 import { KsuHeaderComponent } from '../ksu-header/ksu-header.component';
 import { KsuEnvironmentBannerComponent } from '../ksu-environment-banner/ksu-environment-banner.component';
 
@@ -33,11 +33,11 @@ import { KsuEnvironmentBannerComponent } from '../ksu-environment-banner/ksu-env
     RouterLink,
     ThemedAuthNavMenuComponent,
     ThemedLangSwitchComponent,
-    NavbarComponent,
     ThemedSearchNavbarComponent,
     TranslateModule,
     KsuHeaderComponent,
-    KsuEnvironmentBannerComponent
+    KsuEnvironmentBannerComponent,
+    NavbarComponent,
   ],
 })
 export class HeaderComponent extends BaseComponent implements OnInit {

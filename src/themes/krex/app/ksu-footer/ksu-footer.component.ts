@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 /**
  * Simple component to inject the standard KSU Footer
@@ -7,7 +7,6 @@ import {Component} from '@angular/core';
   selector: 'ds-ksu-footer',
   styleUrls: ['./ksu-footer.component.scss'],
   templateUrl: './ksu-footer.component.html',
-  standalone: true,
 })
 
 export class KsuFooterComponent {

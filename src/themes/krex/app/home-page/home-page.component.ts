@@ -18,7 +18,6 @@ import { KsuHomeBelowSearchBarComponent } from './ksu-home-below-search-bar/ksu-
   imports: [
     HomeCoarComponent,
     NgTemplateOutlet,
-    RecentItemListComponent,
     SuggestionsPopupComponent,
     ThemedConfigurationSearchPageComponent,
     ThemedHomeNewsComponent,
