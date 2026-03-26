@@ -1,4 +1,7 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {
+  ComponentFixture,
+  TestBed,
+} from '@angular/core/testing';
 
 import { KsuEnvironmentBannerComponent } from './ksu-environment-banner.component';
 
@@ -8,9 +11,9 @@ describe('KsuEnvironmentBannerComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [KsuEnvironmentBannerComponent]
+      imports: [KsuEnvironmentBannerComponent],
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(KsuEnvironmentBannerComponent);
     component = fixture.componentInstance;

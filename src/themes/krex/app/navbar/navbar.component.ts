@@ -28,5 +28,5 @@ import { ThemedUserMenuComponent } from '../../../../app/shared/auth-nav-menu/us
     TranslateModule,
   ],
 })
-export class NavbarComponent extends BaseComponent {
+export class ThemedNavbarComponent extends BaseComponent {
 }
