@@ -3,13 +3,13 @@
     <div class="item-page" @fadeInOut>
       @if (itemRD?.payload; as item) {
         <div>
-          <ds-item-alerts [item]="item"></ds-item-alerts>
-          <ds-item-versions-notice [item]="item"></ds-item-versions-notice>
+          <!-- <ds-item-alerts [item]="item"></ds-item-alerts> -->
+          <!-- <ds-item-versions-notice [item]="item"></ds-item-versions-notice> -->
           @if (!item.isWithdrawn || (isAdmin$|async)) {
             <div class="full-item-info">
               <div class="d-flex flex-row">
-                <ds-item-page-title-field class="me-auto" [item]="item"></ds-item-page-title-field>
-                <ds-dso-edit-menu></ds-dso-edit-menu>
+                <!-- <ds-item-page-title-field class="me-auto" [item]="item"></ds-item-page-title-field> -->
+                <!-- <ds-dso-edit-menu></ds-dso-edit-menu> -->
               </div>
               @if (!fromSubmissionObject) {
                 <div class="simple-view-link my-3">
