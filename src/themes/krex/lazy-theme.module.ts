@@ -15,6 +15,10 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
 import { RootModule } from '../../app/root.module';
 
+import { KsuHomeBelowSearchBarComponent } from './app/home-page/ksu-home-below-search-bar/ksu-home-below-search-bar.component';
+import { LoginPageComponent } from './app/login-page/login-page.component';
+import { HomePageComponent } from './app/home-page/home-page.component';
+
 const DECLARATIONS = [
 ];
 
