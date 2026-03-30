@@ -10,6 +10,9 @@ import { HomePageComponent } from './app/home-page/home-page.component';
 import { LoginPageComponent } from './app/login-page/login-page.component';
 import { NavbarComponent } from './app/navbar/navbar.component';
 import { SearchFormComponent } from './app/shared/search-form/search-form.component';
+import { KsuEnvironmentBannerComponent } from './app/ksu-environment-banner/ksu-environment-banner.component';
+import { KsuHeaderComponent } from './app/ksu-header/ksu-header.component';
+import { KsuFooterComponent } from './app/ksu-footer/ksu-footer.component';
 
 
 /**
@@ -22,13 +25,13 @@ const DECLARATIONS = [
   ...ENTRY_COMPONENTS,
   HomeNewsComponent,
   HeaderComponent,
-  NavbarComponent,
-  FooterComponent,
-  HomePageComponent,
-  HomeNewsComponent,
-  SearchFormComponent,
-  LoginPageComponent,
   HeaderNavbarWrapperComponent,
+  NavbarComponent,
+  KsuEnvironmentBannerComponent,
+  KsuHeaderComponent,
+  FooterComponent,
+  KsuFooterComponent,
+  SearchFormComponent,
 ];
 
 @NgModule({
