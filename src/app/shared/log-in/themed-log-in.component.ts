@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { ThemedComponent } from '../theme-support/themed.component';
 import { LogInComponent } from './log-in.component';
+import { AuthMethodType } from 'src/app/core/auth/models/auth.method-type';
 
 /**
  * Themed wrapper for {@link LogInComponent}
@@ -13,9 +14,11 @@ import { LogInComponent } from './log-in.component';
 export class ThemedLogInComponent extends ThemedComponent<LogInComponent> {
 
   @Input() isStandalonePage: boolean;
+  @Input() allowedAuthMethods: AuthMethodType[] = [];
 
   protected inAndOutputNames: (keyof LogInComponent & keyof this)[] = [
     'isStandalonePage',
+    'allowedAuthMethods',
   ];
 
   protected getComponentName(): string {

@@ -1,5 +1,7 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
-import { map, Observable } from 'rxjs';
+import { BehaviorSubject,
+  combineLatest,
+  map, Observable } from 'rxjs';
 import { select, Store } from '@ngrx/store';
 import { AuthMethod } from '../../core/auth/models/auth.method';
 import {
@@ -8,10 +10,11 @@ import {
   isAuthenticated,
   isAuthenticationLoading
 } from '../../core/auth/selectors';
-import { hasValue } from '../empty.util';
+import { hasValue, isEmpty } from '../empty.util';
 import { AuthService } from '../../core/auth/auth.service';
 import { CoreState } from '../../core/core-state.model';
 import { rendersAuthMethodType } from './methods/log-in.methods-decorator';
+import { AuthMethodType } from 'src/app/core/auth/models/auth.method-type';
 
 @Component({
   selector: 'ds-log-in',
@@ -26,6 +29,15 @@ export class LogInComponent implements OnInit {
    * @type {boolean}
    */
   @Input() isStandalonePage: boolean;
+
+  /**
+   * A list of allowed AuthMethodType
+   *  names represent which methods to display
+   *  (for example, the nav bar may like to just
+   *  show Shib, ORCID while the standalone login
+   *  page could have plain password auth)
+   */
+  @Input() allowedAuthMethods: AuthMethodType[];
 
   /**
    * The list of authentication methods available
@@ -54,11 +66,15 @@ export class LogInComponent implements OnInit {
     this.authMethods = this.store.pipe(
       select(getAuthenticationMethods),
       map((methods: AuthMethod[]) => methods
+        // Allow specified methods, or all if list is empty
+        .filter((authMethod: AuthMethod) => (
+          isEmpty(this.allowedAuthMethods) || this.allowedAuthMethods.includes(authMethod.authMethodType)))
         .filter((authMethod: AuthMethod) => rendersAuthMethodType(authMethod.authMethodType) !== undefined)
         .sort((method1: AuthMethod, method2: AuthMethod) => method1.position - method2.position)
       ),
     );
-
+    console.dir(this.authMethods);
+    console.dir(this.allowedAuthMethods);
     // set loading
     this.loading = this.store.pipe(select(isAuthenticationLoading));
 

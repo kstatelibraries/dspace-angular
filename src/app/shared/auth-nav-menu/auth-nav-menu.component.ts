@@ -12,6 +12,7 @@ import { isNotUndefined } from '../empty.util';
 import { isAuthenticated, isAuthenticationLoading } from '../../core/auth/selectors';
 import { EPerson } from '../../core/eperson/models/eperson.model';
 import { AuthService, LOGIN_ROUTE, LOGOUT_ROUTE } from '../../core/auth/auth.service';
+import { AuthMethodType } from 'src/app/core/auth/models/auth.method-type';
 
 @Component({
   selector: 'ds-auth-nav-menu',
@@ -39,6 +40,8 @@ export class AuthNavMenuComponent implements OnInit {
   public user: Observable<EPerson>;
 
   public sub: Subscription;
+
+  public allowedAuthMethods: AuthMethodType[] = [AuthMethodType.Shibboleth];
 
   constructor(private store: Store<AppState>,
               private windowService: HostWindowService,

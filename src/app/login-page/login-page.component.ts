@@ -13,6 +13,7 @@ import {
   ResetAuthenticationMessagesAction
 } from '../core/auth/auth.actions';
 import { hasValue, isNotEmpty } from '../shared/empty.util';
+import { AuthMethodType } from '../core/auth/models/auth.method-type';
 import { AuthTokenInfo } from '../core/auth/models/auth-token-info.model';
 import { isAuthenticated } from '../core/auth/selectors';
 
@@ -31,6 +32,8 @@ export class LoginPageComponent implements OnDestroy, OnInit {
    * @type {Subscription}
    */
   sub: Subscription;
+
+  public allowedAuthMethods: AuthMethodType[] = [AuthMethodType.Shibboleth];
 
   /**
    * Initialize instance variables
