@@ -15,4 +15,5 @@ import { ThemedLogInComponent } from 'src/app/shared/log-in/themed-log-in.compon
 })
 export class LoginPageComponent extends BaseComponent {
   public readonly AuthMethodType = AuthMethodType;
+  public allowedAuthMethods: AuthMethodType[] = [AuthMethodType.Shibboleth];
 }
