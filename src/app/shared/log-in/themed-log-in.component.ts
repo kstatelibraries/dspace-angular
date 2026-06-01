@@ -1,4 +1,4 @@
-import {
+import { 
   Component,
   Input,
 } from '@angular/core';
@@ -15,15 +15,16 @@ import { LogInComponent } from './log-in.component';
   templateUrl: './../theme-support/themed.component.html',
 })
 export class ThemedLogInComponent extends ThemedComponent<LogInComponent> {
-
   @Input() isStandalonePage: boolean;
 
   @Input() excludedAuthMethod: AuthMethodType;
 
+  @Input() allowedAuthMethods: AuthMethodType[] = []; // Added allowed array input
+
   @Input() showRegisterLink: boolean;
 
   protected inAndOutputNames: (keyof LogInComponent & keyof this)[] = [
-    'isStandalonePage', 'excludedAuthMethod', 'showRegisterLink',
+    'isStandalonePage', 'excludedAuthMethod', 'allowedAuthMethods', 'showRegisterLink',
   ];
 
   protected getComponentName(): string {

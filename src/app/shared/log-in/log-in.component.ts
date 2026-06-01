@@ -10,18 +10,17 @@ import {
   Store,
 } from '@ngrx/store';
 import { Observable } from 'rxjs';
-
+import { map } from 'rxjs/operators'; // Imported map operator
 import { AuthService } from '../../core/auth/auth.service';
 import { AuthMethodsService } from '../../core/auth/auth-methods.service';
 import { AuthMethod } from '../../core/auth/models/auth.method';
 import { AuthMethodType } from '../../core/auth/models/auth.method-type';
-import {
-  getAuthenticationError,
+import { getAuthenticationError,
   isAuthenticated,
   isAuthenticationLoading,
 } from '../../core/auth/selectors';
 import { CoreState } from '../../core/core-state.model';
-import { hasValue } from '../empty.util';
+import { hasValue, isEmpty } from '../empty.util'; 
 import { ThemedLoadingComponent } from '../loading/themed-loading.component';
 import { LogInContainerComponent } from './container/log-in-container.component';
 import { AUTH_METHOD_FOR_DECORATOR_MAP } from './methods/log-in.methods-decorator';
@@ -38,7 +37,6 @@ import { AUTH_METHOD_FOR_DECORATOR_MAP } from './methods/log-in.methods-decorato
   ],
 })
 export class LogInComponent implements OnInit {
-
   /**
    * A boolean representing if LogInComponent is in a standalone page
    * @type {boolean}
@@ -54,9 +52,14 @@ export class LogInComponent implements OnInit {
    */
   @Input() showRegisterLink = true;
 
+ /**
+   * Specific methods allowed to be rendered (empty array allows all)
+   */
+  @Input() allowedAuthMethods: AuthMethodType[] = [];
+
   /**
    * The list of authentication methods available
-   * @type {AuthMethod[]}
+   * @type {Observable<AuthMethod[]>}
    */
   public authMethods: Observable<AuthMethod[]>;
 
@@ -79,7 +82,12 @@ export class LogInComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.authMethods = this.authMethodsService.getAuthMethods(AUTH_METHOD_FOR_DECORATOR_MAP, this.excludedAuthMethod);
+    // KSUl-MODIFICATION Fetch backend methods and map-filter them based on allowedAuthMethods rules
+    this.authMethods = this.authMethodsService.getAuthMethods(AUTH_METHOD_FOR_DECORATOR_MAP, this.excludedAuthMethod).pipe(
+      map((methods: AuthMethod[]) => methods.filter((authMethod: AuthMethod) => 
+        isEmpty(this.allowedAuthMethods) || this.allowedAuthMethods.includes(authMethod.authMethodType)
+      ))
+    );
 
     // set loading
     this.loading = this.store.pipe(select(isAuthenticationLoading));
