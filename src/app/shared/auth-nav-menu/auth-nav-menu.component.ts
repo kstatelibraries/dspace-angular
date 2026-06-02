@@ -50,6 +50,7 @@ import { HostWindowService } from '../host-window.service';
 import { ThemedLogInComponent } from '../log-in/themed-log-in.component';
 import { BrowserOnlyPipe } from '../utils/browser-only.pipe';
 import { ThemedUserMenuComponent } from './user-menu/themed-user-menu.component';
+import { AuthMethodType } from 'src/app/core/auth/models/auth.method-type';
 
 @Component({
   selector: 'ds-base-auth-nav-menu',
@@ -74,6 +75,8 @@ export class AuthNavMenuComponent implements OnInit {
    * @type {Observable<string>}
    */
   public isAuthenticated$: Observable<boolean>;
+
+  public allowedAuthMethods: AuthMethodType[] = [AuthMethodType.Shibboleth];
 
   /**
    * True if the authentication is loading.
