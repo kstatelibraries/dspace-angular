@@ -76,7 +76,7 @@ export class AuthNavMenuComponent implements OnInit {
    */
   public isAuthenticated$: Observable<boolean>;
 
-  public allowedAuthMethods: AuthMethodType[] = [AuthMethodType.Shibboleth,];
+  public allowedAuthMethods: AuthMethodType[] = [AuthMethodType.Shibboleth];
 
   /**
    * True if the authentication is loading.
