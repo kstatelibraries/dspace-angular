@@ -1,9 +1,75 @@
 rest:
   ssl: true
-  host: sandbox.dspace.org
+  host: demo.dspace.org
   port: 443
   nameSpace: /server
 
+info:
+  # Whether the end user agreement is required before users may use the repository.
+  # If enabled, the user will be required to accept the agreement before they can use the repository.
+  # If disabled, the page will not exist and no agreement is required to use the repository
+  enableEndUserAgreement: false
+  # Whether the privacy statement should exist or not.
+  enablePrivacyStatement: false
+
+# Whether to enable Markdown (https://commonmark.org/) and MathJax (https://www.mathjax.org/)
+# display in supported metadata fields. By default, only dc.description.abstract is supported.
+markdown:
+  enabled: true
+  mathjax: true
+
+# Whether to enable media viewer for image and/or video Bitstreams (i.e. Bitstreams whose MIME type starts with 'image' or 'video').
+# When "image: true", this enables a gallery viewer where you can zoom or page through images.
+# When "video: true", this enables embedded video streaming.  This embedded video streamer also supports audio files.
+mediaViewer:
+  image: true
+  video: true
+
+item:
+  # Show the item access status label in items lists (default=false)
+  showAccessStatuses: true
+
+homePage:
+  recentSubmissions:
+    # The number of item showing in recent submissions list. Set to "0" to hide all recent submissions
+    pageSize: 0
+    # Date field to use to sort recent submissions
+    sortField: 'dc.date.accessioned'
+  topLevelCommunityList:
+    # Number of communities to list (per page) on the home page
+    # This will always round to the nearest number from the list of page sizes. e.g. if you set it to 7 it'll use 10
+    pageSize: 5
+
 themes:
+  - name: etdr
+    extends: krex
+    # handle: '2097/1'
+    # Electronic Theses, Dissertations, and Reports
+    uuid: 'f152864b-1dab-4dae-a7d7-b5b6daacfc4b'
+
+  - name: etdr
+    extends: krex
+    # handle: '2097/1064'
+    # Master of Public Health Student Reports and Theses
+    uuid: 'd7856439-3d4d-43ea-8016-89bfed705f47'
+
+  - name: etdr
+    extends: krex
+    # handle: '2097/39169'
+    uuid: '6f9a9785-2a0f-4e15-ac59-947ee95ed896'
+
+  # default theme, based on DSpace
   - name: krex
-    extends: dspace 
+    headTags:
+      # Insert <link rel="icon" href="assets/krex/images/favicons/favicon.ico" sizes="any"/> into the <head> of the page.
+      - tagName: link
+        attributes:
+          rel: icon
+          href: assets/krex/images/favicons/favicon.ico
+          sizes: any
+
+environmentBanner:
+  text: 'K-REx Production Environment'
+  foregroundColor: '#fff'
+  backgroundColor: '#996f00'
+  enabled: false
