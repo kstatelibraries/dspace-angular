@@ -7471,4 +7471,16 @@
   "submission.sections.submit.progressbar.describe.stepone.etdpagetwo.symbols.hint": "Copy and paste the text of your abstract here. Do not include the heading \"Abstract.\" If your abstract contains mathematical operators or other symbols that do not display properly within the Abstract input box, follow the steps <a href='/info/guidelines/keywords' target='_blank'>here</a>.",
 
   "submission.sections.submit.progressbar.describe.stepone.etdpagetwo.sponsorship.hint": "(Optional) Enter the names of agencies, if any, that helped to fund your research. Do not use acronyms or abbreviations. If you did not have a source of funding for your research, leave this space blank.",
+
+  "item.page.etdr.graduationmonth": "Graduation Month",
+
+  "item.page.etdr.degree": "Degree",
+
+  "item.page.etdr.department": "Department",
+
+  "item.page.etdr.advisor": "Major Professor",
+
+  "item.page.etdr.date": "Date",
+
+  "item.page.etdr.type": "Type",
 }

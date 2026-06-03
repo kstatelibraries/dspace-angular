@@ -4,19 +4,22 @@ import { NgModule } from '@angular/core';
 import { RootModule } from '../../app/root.module';
 import { FullItemPageComponent } from './app/item-page/full/full-item-page.component';
 import { ItemPageTitleFieldComponent } from './app/item-page/simple/field-components/specific-field/title/item-page-title-field.component';
-
+import { UntypedItemComponent } from './app/item-page/simple/item-types/untyped-item/untyped-item.component';
+import { ItemPageComponent } from './app/item-page/simple/item-page.component';
 
 /**
  * Add components that use a custom decorator to ENTRY_COMPONENTS as well as DECLARATIONS.
  * This will ensure that decorator gets picked up when the app loads
  */
 const ENTRY_COMPONENTS = [
+  UntypedItemComponent,
 ];
 
 const DECLARATIONS = [
   ...ENTRY_COMPONENTS,
     FullItemPageComponent,
     ItemPageTitleFieldComponent,
+    ItemPageComponent,
 ];
 
 @NgModule({
