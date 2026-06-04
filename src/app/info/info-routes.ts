@@ -13,13 +13,17 @@ import { ThemedEndUserAgreementComponent } from './end-user-agreement/themed-end
 import { ThemedFeedbackComponent } from './feedback/themed-feedback.component';
 import {
   ACCESSIBILITY_SETTINGS_PATH,
+  ABOUT_PATH,
   COAR_NOTIFY_SUPPORT,
   END_USER_AGREEMENT_PATH,
   FEEDBACK_PATH,
   PRIVACY_PATH,
+  POLICIES_PATH,
 } from './info-routing-paths';
 import { NotifyInfoComponent } from './notify-info/notify-info.component';
 import { ThemedPrivacyComponent } from './privacy/themed-privacy.component';
+import { AboutComponent } from './about/about.component';
+import { PoliciesComponent } from './policies/policies.component';
 
 
 export const ROUTES: Routes = [
@@ -60,4 +64,22 @@ export const ROUTES: Routes = [
       breadcrumbKey: 'info.coar-notify-support',
     },
   } : undefined,
+  {
+    path: ABOUT_PATH,
+    component: AboutComponent,
+    resolve: { breadcrumb: i18nBreadcrumbResolver },
+    data: {
+      title: 'info.about.title',
+      breadcrumbKey: 'info.about',
+    },
+  },
+  {
+    path: POLICIES_PATH,
+    component: PoliciesComponent,
+    resolve: { breadcrumb: i18nBreadcrumbResolver },
+    data: {
+      title: 'info.policies.title',
+      breadcrumbKey: 'info.policies',
+    },
+  },
 ].filter((route: Route) => hasValue(route));
