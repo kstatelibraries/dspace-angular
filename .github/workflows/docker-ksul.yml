@@ -8,6 +8,7 @@ name: Docker images
 # https://github.com/kstatelibraries/kstatelibraries/blob/main/.github/workflows/reusable-docker-build.yml
 #
 on:
+  workflow_dispatch:
   push:
     branches:
       - 'ksul_dspace-**'
